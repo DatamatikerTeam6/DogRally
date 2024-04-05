@@ -1,0 +1,92 @@
+﻿@page "/createcourse"
+@using HundeProjekt.Models
+@inject HttpClient Http
+
+<h3>Opret Bane</h3>
+
+
+<div id="left" class="container">
+    <div class="dragthing">Ikon</div>
+</div>
+
+<div id="right" class="container">
+    <div class="dragthing">Bane</div>
+</div>
+
+
+
+@code {
+    [Inject]
+    protected IJSRuntime JSRuntime { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("init");
+        }
+    }
+}
+
+
+
+<EditForm Model="@course" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="CourseName">Banenavn:</label>
+        <InputText id="CourseName" class="form-control" @bind-Value="@course.CourseName" />
+    </div>
+    <div class="form-group">
+        <label for="CourseDate">Banedato:</label>
+        <InputDate id="CourseDate" class="form-control" @bind-Value="@course.CourseDate" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Opret Bane</button>
+</EditForm>
+
+
+
+
+
+@if (showSuccessMessage)
+{
+    <div class="alert alert-success" role="alert">
+        Kursus oprettet succesfuldt!
+    </div>
+}
+
+@if (showErrorMessage)
+{
+    <div class="alert alert-danger" role="alert">
+        Der opstod en fejl ved oprettelsen af kurset. @errorMessage
+    </div>
+}
+
+@code {
+    private Course course = new Course();
+    private bool showSuccessMessage = false;
+    private bool showErrorMessage = false;
+    private string errorMessage;
+
+    
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("https://localhost:7259/api/Courses/Create", course); //Fuld sti istedet for relativ sti
+            response.EnsureSuccessStatusCode(); // Sikrer, at anmodningen var vellykket
+
+            showSuccessMessage = true;
+            showErrorMessage = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            // Håndter fejlen
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            errorMessage = ex.Message; // Gem den faktiske fejlbesked
+        }
+    }
+}
