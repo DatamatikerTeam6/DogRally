@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PPRCvzJh7qbTaLu57wzBnVgNcaZ6jL/MeCofDUhziwE=",
+  "Hash": "P4Deb0ennXlOQxZsEGZnkEOYD0VMtino94sa/JQU0PA=",
   "Source": "DogRally",
   "BasePath": "/",
   "Mode": "Root",
@@ -7864,12 +7864,12 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragthing.css",
+      "Identity": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\courseStyle.css",
       "SourceId": "DogRally",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/dragthing.css",
+      "RelativePath": "css/courseStyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7880,7 +7880,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\dragthing.css"
+      "OriginalItemSpec": "wwwroot\\css\\courseStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragExercise.css",
+      "SourceId": "DogRally",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/dragExercise.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dragExercise.css"
     },
     {
       "Identity": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\favicon.png",

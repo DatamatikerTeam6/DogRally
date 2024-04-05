@@ -1,0 +1,50 @@
+﻿.mainFlexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.courseHorizontalGridContainer {
+    display: grid;    
+    background: green;
+    width: 80px;  
+    height: 65px;
+}
+
+.courseVerticalGridContainer {
+    display: grid;
+    background: green;
+    width: 80px;
+    height: 65px;
+}
+
+.exerciseFlexContainer {
+    display: flex;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+/*.courseStyle{
+    background: lightgrey;
+    margin: 20px;    
+}
+*/
+
+.mainGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Definerer antallet af kolonner og deres størrelse */
+    gap: 0px; /* Afstand mellem grid-elementer */
+}
+
+.courseHorizontalGridContainer {
+    border: 1px solid #ccc; /* Tilføj eventuelle yderligere stylingregler */
+}
+
+

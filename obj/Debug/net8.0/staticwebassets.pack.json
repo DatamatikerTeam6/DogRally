@@ -25,8 +25,12 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragthing.css",
-      "PackagePath": "staticwebassets\\css\\dragthing.css"
+      "Id": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\courseStyle.css",
+      "PackagePath": "staticwebassets\\css\\courseStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragExercise.css",
+      "PackagePath": "staticwebassets\\css\\dragExercise.css"
     },
     {
       "Id": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\favicon.png",

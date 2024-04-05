@@ -1,0 +1,8 @@
+﻿.dragExercise{
+    background: lightgrey;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 60px;
+}
