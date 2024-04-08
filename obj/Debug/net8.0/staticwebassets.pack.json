@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\css\\courseStyle.css"
     },
     {
+      "Id": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragAndDrop.css",
+      "PackagePath": "staticwebassets\\css\\dragAndDrop.css"
+    },
+    {
       "Id": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragExercise.css",
       "PackagePath": "staticwebassets\\css\\dragExercise.css"
     },

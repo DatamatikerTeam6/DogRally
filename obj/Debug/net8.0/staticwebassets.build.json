@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P4Deb0ennXlOQxZsEGZnkEOYD0VMtino94sa/JQU0PA=",
+  "Hash": "W5yZB80/AfrbrqHdmJqae4JEQzE7cOoUPUrvMh9mXcg=",
   "Source": "DogRally",
   "BasePath": "/",
   "Mode": "Root",
@@ -7881,6 +7881,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\courseStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragAndDrop.css",
+      "SourceId": "DogRally",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/dragAndDrop.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dragAndDrop.css"
     },
     {
       "Identity": "C:\\Users\\Justin\\Datamatiker\\Programmering\\Kode\\DogRally\\wwwroot\\css\\dragExercise.css",

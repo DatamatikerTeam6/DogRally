@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.courseHorizontalGridContainer {
+/*.courseHorizontalGridContainer {
     display: grid;    
     background: green;
     width: 80px;  
@@ -15,7 +15,7 @@
     background: green;
     width: 80px;
     height: 65px;
-}
+}*/
 
 .exerciseFlexContainer {
     display: flex;

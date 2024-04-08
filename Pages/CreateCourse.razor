@@ -4,96 +4,21 @@
 
 <h3>Opret Bane</h3>
 
-<div class="mainFlexContainer">
-    <div class="exerciseFlexContainer">
-        <div id="exercises" class="container">
-            <div class="dragExercise">Ikon</div>
-            <div class="dragExercise">Ikon2</div>
-        </div>   
-    </div>
-@* 
-    <div class="horizontalContainer">
-        @for (int i = 1; i <= 10; i++)
-        {
-            <div class="courseHorizontalGridContainer">
-                <div id="course@(i)" class="container"></div>
-            </div>
-        }
-    </div>
 
-    <div class="verticalContainer">
-        @for (int i = 1; i <= 10; i++)
-        {
-            <div class="courseVerticalGridContainer">
-                <div id="course1@(i)" class="container"></div>
-            </div>
-        }
-    </div> *@
 
-    <div class="mainFlexContainer">
-        <div class="exerciseFlexContainer">
-            <div id="exercises" class="container">
-                <div class="dragExercise">Ikon</div>
-                <div class="dragExercise">Ikon2</div>
-            </div>
-        </div>
-
-        <div class="mainGridContainer">
-            @for (int i = 1; i <= 112; i++)
-            {
-                <div class="courseHorizontalGridContainer">
-                    <div id="course@(i)" class="container"></div>
-                </div>
-            }
-        </div>
-    </div>
-
-    @* <div class="courseGridContainer">
-        <div id="course1" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course2" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course3" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course4" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course5" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course6" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course7" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course8" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course9" class="container"></div>
-    </div>
-    <div class="courseGridContainer">
-        <div id="course10" class="container"></div>
-    </div> *@
+<!-- Giv hvert dragbart element et unikt ID -->
+<div id="drag-1" class="draggable">
+    <p> 1 </p>
+</div>
+<div id="drag-2" class="draggable">
+    <p> 2 </p>
 </div>
 
+<div id="outer-dropzone" class="dropzone">
+    #outer-dropzone
+</div>
 
-@* @code {
-    [Inject]
-    protected IJSRuntime JSRuntime { get; set; }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await JSRuntime.InvokeVoidAsync("init");
-        }
-    }
-} *@
-
+@* 
 @code {
     [Inject]
     protected IJSRuntime JSRuntime { get; set; }
@@ -103,13 +28,11 @@
         if (firstRender)
         {
             await JSRuntime.InvokeVoidAsync("init");
-          
+
             // Tilføj flere initialiseringer efter behov
         }
     }
-}
-
-
+} *@
 
 
 <EditForm Model="@course" OnValidSubmit="@HandleValidSubmit">
@@ -127,9 +50,6 @@
 
     <button type="submit" class="btn btn-primary">Opret Bane</button>
 </EditForm>
-
-
-
 
 
 @if (showSuccessMessage)

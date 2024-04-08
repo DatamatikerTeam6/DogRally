@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DogRally",
   "resources": {
-    "hash": "sha256-/raGicgIl1tHxIanRBRQWDJven6iDm44YbpVNh4yWJ4=",
+    "hash": "sha256-6SJVJCQ7gQSBMPr0X9X6OSyfSPd8m97YcKfeBTulM8U=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.ajbr9fkxi8.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "DogRally.wasm": "sha256-dehX8zIoXRo0XJyS1cF0J68Rv9v4ru82ov4Y+HnLQ+U="
+      "DogRally.wasm": "sha256-rqGRoP7N61jNybSsqt661Yr7e/JJupzds1UzK2my0fM="
     },
     "pdb": {
-      "DogRally.pdb": "sha256-sUbl9x7lVJENmhE3Gp5Mf6//HIGpvIdOiD7DA/leDN4="
+      "DogRally.pdb": "sha256-VD0fxGms103cJHO0vrTjeSdHZ+yafwQRazEdqbEvzlY="
     }
   },
   "cacheBootResources": true,
