@@ -1,5 +1,7 @@
 ﻿@page "/createcourse"
+@using DogRally.Models
 @using HundeProjekt.Models
+@using System.Text.Json
 @inject HttpClient Http
 
 <h3>Opret Bane</h3>
@@ -18,21 +20,31 @@
     #outer-dropzone
 </div>
 
-@* 
+@inject IJSRuntime JSRuntime
+
 @code {
-    [Inject]
-    protected IJSRuntime JSRuntime { get; set; }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    private async Task<dynamic> GetPositionFromLocalStorageAsync(string uniqueId)
     {
-        if (firstRender)
-        {
-            await JSRuntime.InvokeVoidAsync("init");
-
-            // Tilføj flere initialiseringer efter behov
-        }
+        // Invoke the JavaScript function and return its value
+        return await JSRuntime.InvokeAsync<object>("getPositionFromLocalStorage", uniqueId);
     }
-} *@
+}
+
+@code {
+    private double positionX = 0;
+    private double positionY = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string uniqueId = "clone-1712574903875-47abcb97b5b258"; // Eksempel på unikt ID
+
+        // Kalder JS-metoden for at få positionen som en JSON-streng
+        var positionJson = await GetPositionFromLocalStorageAsync(uniqueId);
+
+        Console.WriteLine($"Position JSON: {positionJson}");
+    }
+}
+
 
 
 <EditForm Model="@course" OnValidSubmit="@HandleValidSubmit">
@@ -47,9 +59,18 @@
         <label for="CourseDate">Banedato:</label>
         <InputDate id="CourseDate" class="form-control" @bind-Value="@course.CourseDate" />
     </div>
+    @* <div class="form-group">
+        <label for="PositionX">Position X:</label>
+        <InputNumber @bind-Value="@positionX" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="PositionY">Position Y:</label>
+        <InputNumber @bind-Value="@positionY" class="form-control" />
+    </div> *@
 
-    <button type="submit" class="btn btn-primary">Opret Bane</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </EditForm>
+
 
 
 @if (showSuccessMessage)
