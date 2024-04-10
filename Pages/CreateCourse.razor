@@ -31,17 +31,29 @@
 }
 
 @code {
-    private double positionX = 0;
-    private double positionY = 0;
-
     protected override async Task OnInitializedAsync()
     {
         string uniqueId = "clone-1712574903875-47abcb97b5b258"; // Eksempel på unikt ID
 
-        // Kalder JS-metoden for at få positionen som en JSON-streng
+        // Call JS-method to get the positon as a JSON-string
         var positionJson = await GetPositionFromLocalStorageAsync(uniqueId);
 
-        Console.WriteLine($"Position JSON: {positionJson}");
+
+        Console.WriteLine($"json string: {positionJson}");
+
+        //Convert json to string
+        string JsonString = positionJson.ToString();
+
+        //Deserialize json string
+        if (JsonString != null)
+        {
+            Position position = JsonSerializer.Deserialize<Position>(JsonString);
+
+            if (position != null)
+            {
+                Console.WriteLine($"position x-værdi: {position.X} position y-værdi: {position.Y}");
+            }
+        }
     }
 }
 
@@ -60,12 +72,12 @@
         <InputDate id="CourseDate" class="form-control" @bind-Value="@course.CourseDate" />
     </div>
     @* <div class="form-group">
-        <label for="PositionX">Position X:</label>
-        <InputNumber @bind-Value="@positionX" class="form-control" />
+    <label for="PositionX">Position X:</label>
+    <InputNumber @bind-Value="@positionX" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="PositionY">Position Y:</label>
-        <InputNumber @bind-Value="@positionY" class="form-control" />
+    <label for="PositionY">Position Y:</label>
+    <InputNumber @bind-Value="@positionY" class="form-control" />
     </div> *@
 
     <button type="submit" class="btn btn-primary">Submit</button>

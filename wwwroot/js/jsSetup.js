@@ -68,22 +68,12 @@
         }
     });
 
-//function getPositionFromLocalStorage(uniqueId) {
-//    // Retrieve the position object from localStorage
-//    const positionJson = localStorage.getItem(uniqueId);
-//    if (positionJson) {
-//        return JSON.parse(positionJson);
-//    }
-//    return null;
-//}
-
-function GetPositionFromLocalStorageAsync(uniqueId) {
+function getPositionFromLocalStorage(uniqueId) {
     // Retrieve the position object from localStorage
     const positionJson = localStorage.getItem(uniqueId);
     if (positionJson) {
-        const position = JSON.parse(positionJson);
-        return { x: parseDouble(position.x, y:  parseDouble(position.y) };
+        return JSON.parse(positionJson);
     }
-    // Hvis positionen ikke findes, returneres null
     return null;
 }
+
