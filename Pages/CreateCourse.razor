@@ -110,7 +110,7 @@
     {
         try
         {
-            var response = await Http.PostAsJsonAsync("https://localhost:7259/api/Courses/Create", course); //Fuld sti istedet for relativ sti
+            var response = await Http.PostAsJsonAsync("https://localhost:7261/api/Course/ForwardCourseToMvc", course); //Fuld sti istedet for relativ sti
             response.EnsureSuccessStatusCode(); // Sikrer, at anmodningen var vellykket
 
             showSuccessMessage = true;
